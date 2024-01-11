@@ -1,5 +1,5 @@
 import Container from 'react-bootstrap/Container';
-function Footer() {
+function FooterDark() {
     return (
         <>
         <Container className="bg-dark text-white py4 text-center  " fluid >
@@ -9,4 +9,4 @@ function Footer() {
     )
 }
 
-export default Footer
+export default FooterDark
