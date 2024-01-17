@@ -27,8 +27,8 @@ const CommentSection = ({asin}) => {
             setLoading(false)
           }
         }
-        catch{error}{
-            console.log('error')
+        catch (error){
+            console.log(error)
             setError(true)
             setLoading(false)
         }
@@ -41,12 +41,12 @@ const CommentSection = ({asin}) => {
         <div style={divStyle } className='mt-3 rounded' >
             
             {isLoading&&<Spinner animation="border" />}
-            {isError&&<Alert  variant={ 'danger'}>This is alert—check it out!</Alert>}
+            {isError&&<Alert  variant='danger'>This is alert—check it out!</Alert>}
             <h3>Commenti</h3>
             {comments&&comments.length >0 ?
             comments.map ((comm,index) =>  <SingleComment comm={comm} key={index}/>)
             : <p>non ci sono commenti</p>}
-         <NewComment />
+         <NewComment asin={asin} />
         </div>
     )
 }
